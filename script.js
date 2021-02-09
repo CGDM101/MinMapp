@@ -29,10 +29,25 @@ function getRandomImage()
   image.src = url;
 }
 
-// metod för att få random hund inom viss ras:
+// metod för att få random Corgi:
+function getRandomCorgi()
+{
+  var json = httpGet('https://dog.ceo/api/breed/corgi/images/random');
+  console.log(json);
+  var array = JSON.parse(json);
+  console.log(array);
+  var url = array.message;
+  console.log(url);
+  var image = document.getElementById('corgiImage');
+  image.src = url;
+}
+
+
+// metod för att få random hund inom ras som användaren väljer:
 function getRandomFromBreed()
 {
-  var json = httpGet('https://dog.ceo/api/breed/Corgi/images/random');
+  // alltid Corgi just nu:
+  var json = httpGet('https://dog.ceo/api/breed/corgi/images/random');
   console.log(json);
   var array = JSON.parse(json);
   console.log(array);
@@ -41,9 +56,9 @@ function getRandomFromBreed()
   var image = document.getElementById('breedImage');
   image.src = url;
 
-  //var beagleSelected = document.getElementById("dogbreeds").selectedIndex = 0;
-  //var dachsundSelecte = document.getElementById("dogbreeds").selectedIndex = 1;
+  var beagleSelected = document.getElementById("dogbreeds").selectedIndex = 0;
+  var dachsundSelected = document.getElementById("dogbreeds").selectedIndex = 1;
   var corgiSelected = document.getElementById("dogbreeds").selectedIndex = 2;
 
-  //var x = document.createElement("SELECT"); skapa ett till alt.
+  //var x = document.createElement("SELECT"); skapa ett till alternativ.
 }

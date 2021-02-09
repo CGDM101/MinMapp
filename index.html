@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -26,6 +26,7 @@
     <br>
     <label for="dogbreeds">Välj en ras du vill se!</label>
     <select name="dogbreeds" id="dogbreeds" onchange="if (this.selectedIndex) getRandomFromBreed();">
+    <!-- <select name="dogbreeds" id="dogbreeds" onchange="getRandomFromBreed();"> -->
         <option value="beagle">Beagle</option>
         <option value="dachshund">Tax</option>
         <option value="corgi">Corgi</option>
@@ -33,6 +34,11 @@
     <br>
     <br>
     <img id="breedImage" src="https://dog.ceo/img/dog-api-logo.svg">
+    <br>
+    <br>
+    <button onClick="getRandomCorgi()">Se random Corgi</button>
+    <img id="corgiImage" src="https://dog.ceo/img/dog-api-logo.svg">
+
 </body>
 
 </html>
