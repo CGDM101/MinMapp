@@ -1,18 +1,20 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camillas sida</title>
-    <link rel="stylesheet" type="text/css"href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
 </head>
+
 <body>
     <h1 style=color:dodgerblue font-family:Verdana, Geneva, Tahoma, sans-serif>hejsan</h1>
     <h2 style=color:darkseagreen style=font-family:monospace>hej igen</h2>
@@ -20,5 +22,17 @@
     <br>
     <br>
     <img id="dogImage" src="https://dog.ceo/img/dog-api-logo.svg">
+    <br>
+    <br>
+    <label for="dogbreeds">Välj en ras du vill se!</label>
+    <select name="dogbreeds" id="dogbreeds" onchange="if (this.selectedIndex) getRandomFromBreed();">
+        <option value="beagle">Beagle</option>
+        <option value="dachshund">Tax</option>
+        <option value="corgi">Corgi</option>
+    </select>
+    <br>
+    <br>
+    <img id="breedImage" src="https://dog.ceo/img/dog-api-logo.svg">
 </body>
+
 </html>
